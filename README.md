@@ -1,4 +1,4 @@
-# CTF_Tangerxtetounae
+# CTF
 
 Hello all, this is the official write-up for the CTF made by the CyberSecurity and Cyber Intelligence club of ENSA of Tangier. The challenge consists of 6 categories: Web, Cryptography, Misc, DFIR, Reverse Engineering, and PWN.
 
