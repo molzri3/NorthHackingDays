@@ -1,12 +1,13 @@
 //###################################################################################################################
-//Compilation: gcc -fno-stack-protector -z execstack -no-pie -o challenge1 challenge1.c
+//Compilation: gcc -fno-stack-protector -z execstack -no-pie -o challenge1 challenge1.c --static
 //####################################################################################################################
 
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <fcntl.h> 
+#include <fcntl.h>
+#include <pthread.h>
 
 // Modified win() function to write the flag through the socket
 void win(int sock) {
@@ -47,10 +48,12 @@ void vuln(int sock) {
     // Send welcome message with the address of win()
     char welcome_msg[256];
     snprintf(welcome_msg, sizeof(welcome_msg),
+            "****************************************************************************************\n"
              "Welcome to the restaurant!\n"
              "Mr. Ahmed has a stomach ulcer (jortomat al ma3ida).\n"
              "He warned you: 'Don't give me more than 64 units of food, or my stomach will overflow!'\n"
              "Address of win(): %p\n"  // Include the address of win()
+            "****************************************************************************************\n"
              "Enter the amount of food to serve (max 64 units): ",
              win);
     write(sock, welcome_msg, strlen(welcome_msg));
@@ -85,8 +88,25 @@ void vuln(int sock) {
     }
 }
 
+// Function to handle each client connection in a separate thread
+void *handle_client(void *arg) {
+    int client_sock = *(int *)arg;
+    free(arg); // Free the allocated memory for the client socket
+
+    printf("Client connected\n");
+
+    // Handle client
+    vuln(client_sock);
+
+    // Close client socket
+    close(client_sock);
+    printf("Client disconnected\n");
+
+    return NULL;
+}
+
 int main() {
-    int server_sock, client_sock;
+    int server_sock, *client_sock;
     struct sockaddr_in server_addr, client_addr;
     socklen_t client_len = sizeof(client_addr);
 
@@ -119,24 +139,24 @@ int main() {
 
     // Accept connections
     while (1) {
-        client_sock = accept(server_sock, (struct sockaddr *)&client_addr, &client_len);
-        if (client_sock < 0) {
+        client_sock = malloc(sizeof(int));
+        *client_sock = accept(server_sock, (struct sockaddr *)&client_addr, &client_len);
+        if (*client_sock < 0) {
             perror("accept");
+            free(client_sock);
             continue;
         }
 
-        printf("Client connected\n");
-
-        // Handle client
-        vuln(client_sock);
-
-        // Close client socket
-        close(client_sock);
-        printf("Client disconnected\n");
+        // Create a new thread to handle the client
+        pthread_t thread;
+        if (pthread_create(&thread, NULL, handle_client, client_sock) != 0) {
+            perror("pthread_create");
+            close(*client_sock);
+            free(client_sock);
+        }
     }
 
     // Close server socket (unreachable in this example)
     close(server_sock);
     return 0;
 }
-
