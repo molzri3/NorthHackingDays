@@ -1,0 +1,7 @@
+build and run container
+      sudo docker build -t pnw-bof-challenge .
+      sudo docker run -p 12345:12345 pnw-bof-challenge
+Stop and remove container
+      sudo docker ps
+      sudo docker stop CONTAINER ID
+      sudo docker rm CONTAINER ID
