@@ -1,1 +1,1 @@
-FLAG{fishy_macro_detected}
+CTF{fishy_macro_detected}
