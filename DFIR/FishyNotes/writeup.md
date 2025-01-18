@@ -1,4 +1,3 @@
-```markdown
 # FishyNotes 🐟 - Write-Up
 
 ## Challenge Description Recap
