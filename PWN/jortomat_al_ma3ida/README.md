@@ -1,4 +1,4 @@
-# :snake: jortomat_al_ma3ida (simple stack buffer overflow)
+:snake: #  jortomat_al_ma3ida (simple stack buffer overflow)
 
 ## Discription
 
@@ -8,6 +8,5 @@ He specifically warned you:"Please, don't give me too much food at once! My stom
 
 ## :white_check_mark: FLAG:  Easy
 
-## :pencil2: Note :
-the challege can be solved with simple reverse engineering .
+
 
