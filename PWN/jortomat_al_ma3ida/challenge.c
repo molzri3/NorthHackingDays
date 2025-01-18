@@ -6,26 +6,31 @@
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-
-// XOR key for encoding/decoding
-const unsigned char XOR_KEY = 0xAA;
-
-// Encoded flag using XOR key
-unsigned char encoded_flag[] = {
-    0xE9, 0xFE, 0xFC, 0xD1, 0xC2, 0xDB, 0xCE, 0xCE,
-    0xCB, 0xC4, 0xF5, 0xCC, 0xC6, 0xCB, 0xCD, 0xD7
-}; // Encoded version of "CTF{perfect_meal}"
-
-#define FLAG_LENGTH (sizeof(encoded_flag) / sizeof(encoded_flag[0]))
+#include <fcntl.h> 
 
 // Modified win() function to write the flag through the socket
 void win(int sock) {
-    // Decode the flag at runtime
-    char flag[FLAG_LENGTH + 1];
-    for (size_t i = 0; i < FLAG_LENGTH; i++) {
-        flag[i] = encoded_flag[i] ^ XOR_KEY;
+    // Open the flag.txt file
+    int fd = open("flag.txt", O_RDONLY);
+    if (fd < 0) {
+        perror("open");
+        const char *error_msg = "\nError: Could not open flag.txt.\n";
+        write(sock, error_msg, strlen(error_msg));
+        return;
     }
-    flag[FLAG_LENGTH] = '\0'; // Null-terminate the decoded flag
+
+    // Read the flag from the file
+    char flag[128]; // Adjust size as needed
+    ssize_t bytes_read = read(fd, flag, sizeof(flag) - 1);
+    if (bytes_read < 0) {
+        perror("read");
+        const char *error_msg = "\nError: Could not read flag.txt.\n";
+        write(sock, error_msg, strlen(error_msg));
+        close(fd);
+        return;
+    }
+    flag[bytes_read] = '\0'; // Null-terminate the read data
+    close(fd);
 
     // Send the flag through the socket
     const char *success_msg = "\nCongratulations! You served the perfect meal!\n"
