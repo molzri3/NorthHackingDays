@@ -1,22 +1,13 @@
 # Use a lightweight base image
 FROM ubuntu:20.04
-
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    netcat \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy the challenge code and flag.txt
-COPY challenge.c /app/challenge.c
+# Copy the challenge binary and flag
+COPY test /app/challenge
 COPY flag.txt /app/flag.txt
-
-# Compile the challenge
-WORKDIR /app
-RUN gcc -fno-stack-protector -z execstack -o challenge challenge.c
-
-# Expose the port
+# Set permissions
+RUN chmod 755 /app/challenge
+RUN chmod 644 /app/flag.txt
+# Expose the port (informational)
 EXPOSE 12345
-
+WORKDIR /app
 # Run the challenge
-CMD ["./challenge"]
+CMD ["/app/challenge"]
