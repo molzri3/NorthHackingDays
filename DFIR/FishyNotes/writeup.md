@@ -54,17 +54,17 @@ In the macro code, I noticed several key points:
 ### 4. Decoding the Base64 String
 The `encodedPS` variable contained the Base64-encoded flag, which I decoded using a Base64 decoder:
 ```bash
-echo "RkxBR3tmaXNoeV9tYWNyb19kZXRlY3RlZH0=" | base64 -d
+echo "Q1RGe2Zpc2h5X21hY3JvX2RldGVjdGVkfQ==" | base64 -d
 ```
 This revealed the flag:
 ```
-FLAG{fishy_macro_detected}
+CTF{fishy_macro_detected}
 ```
 
 ---
 
 ## Flag
-`FLAG{fishy_macro_detected}`
+`CTF{fishy_macro_detected}`
 
 ---
 
