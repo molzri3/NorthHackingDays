@@ -29,8 +29,8 @@ This provided access to the VBA macro for further analysis.
 In the macro code, I noticed several key points:
 - The flag was stored in two parts as `part1` and `part2`, making it slightly obfuscated:
   ```vba
-  part1 = "RkxBR3tmaXN"
-  part2 = "ob19kZXRlY3RlZH0="
+  part1 = "Q1RGe2Zpc2h5X21hY"
+  part2 = "3JvX2RldGVjdGVkfQ=="
   encodedPS = part1 & part2
   ```
   When combined, this forms the Base64-encoded string:  
