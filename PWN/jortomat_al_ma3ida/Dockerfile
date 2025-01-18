@@ -7,8 +7,9 @@ RUN apt-get update && apt-get install -y \
     netcat \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy the challenge code
+# Copy the challenge code and flag.txt
 COPY challenge.c /app/challenge.c
+COPY flag.txt /app/flag.txt
 
 # Compile the challenge
 WORKDIR /app
@@ -19,8 +20,3 @@ EXPOSE 12345
 
 # Run the challenge
 CMD ["./challenge"]
-
-##################################################################################
-#sudo docker build -t pnw-bof-challenge .
-#sudo docker run -p 12345:12345 pnw-bof-challenge
-#####################################################################################
