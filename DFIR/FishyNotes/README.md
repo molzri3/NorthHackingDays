@@ -28,7 +28,7 @@ The document has since been isolated for further analysis. Now it’s your turn 
 
 
 ## Flag Format 🏁
-The flag format is: **FLAG{your_solution_here}**
+The flag format is: **CTF{your_solution_here}**
 
 ---
 
