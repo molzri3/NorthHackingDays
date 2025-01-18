@@ -5,3 +5,5 @@ Stop and remove container
       sudo docker ps
       sudo docker stop CONTAINER ID
       sudo docker rm CONTAINER ID
+for debuging purposes:
+sudo docker run -it --rm pnw-test2-challenge /bin/sh
