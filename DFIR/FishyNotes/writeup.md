@@ -34,21 +34,13 @@ In the macro code, I noticed several key points:
   encodedPS = part1 & part2
   ```
   When combined, this forms the Base64-encoded string:  
-  `RkxBR3tmaXNoeV9tYWNyb19kZXRlY3RlZH0=`
+  `Q1RGe2Zpc2h5X21hY3JvX2RldGVjdGVkfQ==`
 
 - The macro also created an obfuscated PowerShell command using the encoded string:
   ```vba
   cmdStart = "powershell.exe "
   cmdEnd = "-EncodedCommand " & encodedPS
   Command = cmdStart & cmdEnd
-  ```
-
-- A fake error message was displayed to simulate suspicious activity:
-  ```vba
-  wmPart1 = "Error: Failed to load "
-  wmPart2 = "resources. Please contact Fairalien."
-  warningMessage = wmPart1 & wmPart2
-  MsgBox warningMessage, vbCritical, "System Error"
   ```
 
 ### 4. Decoding the Base64 String
