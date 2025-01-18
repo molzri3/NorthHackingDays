@@ -10,32 +10,49 @@ You were tasked with analyzing a suspicious Word document, uncovering its malici
 ### 1. Inspecting the Document
 The first step was to analyze the document using `oledump.py` to inspect its data streams:
 ```bash
-oledump.py FishyNotes.doc
+oledump.py FishyNotes.docm
 ```
-This revealed several streams, including one that contained a VBA macro.
+This revealed several streams, including **Stream A3**, which contained a VBA macro.
 
 ---
 
 ### 2. Identifying the Macro Stream
-Stream **8** was identified as containing VBA code. To view the macro, I extracted it with the following command:
+To view the contents of **Stream A3**, I extracted it using the following command:
 ```bash
-oledump.py FishyNotes.doc -s 8 -v
+oledump.py FishyNotes.docm -s A3 -v
 ```
 This provided access to the VBA macro for further analysis.
 
 ---
 
 ### 3. Analyzing the VBA Code
-In the macro code, I discovered a variable named `encodedPS`, which stored a Base64-encoded string. The macro also referenced a PowerShell command using the `-EncodedCommand` parameter. Here’s the relevant snippet:
-```vba
-Dim encodedPS As String
-encodedPS = "RkxBR3tmaXNoeV9tYWNyb19kZXRlY3RlZH0="  
-```
+In the macro code, I noticed several key points:
+- The flag was stored in two parts as `part1` and `part2`, making it slightly obfuscated:
+  ```vba
+  part1 = "RkxBR3tmaXN"
+  part2 = "ob19kZXRlY3RlZH0="
+  encodedPS = part1 & part2
+  ```
+  When combined, this forms the Base64-encoded string:  
+  `RkxBR3tmaXNoeV9tYWNyb19kZXRlY3RlZH0=`
 
----
+- The macro also created an obfuscated PowerShell command using the encoded string:
+  ```vba
+  cmdStart = "powershell.exe "
+  cmdEnd = "-EncodedCommand " & encodedPS
+  Command = cmdStart & cmdEnd
+  ```
+
+- A fake error message was displayed to simulate suspicious activity:
+  ```vba
+  wmPart1 = "Error: Failed to load "
+  wmPart2 = "resources. Please contact Fairalien."
+  warningMessage = wmPart1 & wmPart2
+  MsgBox warningMessage, vbCritical, "System Error"
+  ```
 
 ### 4. Decoding the Base64 String
-I used a Base64 decoder to extract the hidden flag:
+The `encodedPS` variable contained the Base64-encoded flag, which I decoded using a Base64 decoder:
 ```bash
 echo "RkxBR3tmaXNoeV9tYWNyb19kZXRlY3RlZH0=" | base64 -d
 ```
@@ -52,11 +69,9 @@ FLAG{fishy_macro_detected}
 ---
 
 ## Lessons Learned
-This challenge demonstrated how to:
-- Use `oledump.py` to inspect and extract streams from a Word document.
-- Analyze VBA macros for encoded or hidden content.
-- Decode Base64-encoded data to retrieve valuable information.
+This challenge demonstrated how:
+- VBA macros can be slightly obfuscated to make analysis more challenging.
+- Encoded data is often stored in parts to avoid detection by simple string extraction tools.
+- Tools like `oledump.py` are essential for inspecting and extracting suspicious streams in documents.
 
----
-
-Good luck with your future DFIR adventures! 🚀
+Good luck with future DFIR challenges! 🚀
