@@ -60,4 +60,3 @@ This challenge demonstrated how to:
 ---
 
 Good luck with your future DFIR adventures! 🚀
-```
