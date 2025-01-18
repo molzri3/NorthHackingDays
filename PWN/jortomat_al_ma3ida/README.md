@@ -1,4 +1,4 @@
-:snake: #  jortomat_al_ma3ida (simple stack buffer overflow)
+ #  jortomat_al_ma3ida (simple stack buffer overflow)
 
 ## Discription
 
