@@ -13,7 +13,7 @@
 A few days ago, I received a Word document from someone named **Fish**. The file was named **"FishyNotes"**, and at first glance, it seemed harmless—a short note about some promised information. However, things quickly took a turn for the worse.
 
 After opening the document:
-- My PC started freezing and slowing down.
+- i kept receiving an erro.
 - Strange behavior became noticeable, and I suspected something malicious.
 
 The document has since been isolated for further analysis. Now it’s your turn to step in and uncover what Fish was hiding inside. Your task is to analyze the provided file and **extract the hidden flag**.
