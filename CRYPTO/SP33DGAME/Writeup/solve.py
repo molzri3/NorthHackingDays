@@ -19,7 +19,7 @@ while True:
         conn.sendline(str(r).encode())
     f=conn.recvline().decode().strip()
     FLAG+=f
-    print(FLAG)
+    #print(FLAG)
   except:
     conn.close()
     m=int(FLAG,2)
