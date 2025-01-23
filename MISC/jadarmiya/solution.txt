@@ -1,0 +1,24 @@
+As you can see in the picture to bypass the filters you will change those caracters by their equivalentes that's it !! 
+The hint called Digraphs/Trigraphs.
+
+
+Solution : 
+
+
+%:include <stdio.h>
+%:include <stdlib.h>
+
+int main() <%
+    FILE *file;
+    char ch;
+    file = fopen("flag.txt", "r");
+    if (file == NULL) <%
+        printf("Error: Could not open flag.txt. Make sure the file exists.");
+        return 1;
+    %>
+    printf("Content of flag.txt:");
+    while ((ch = fgetc(file)) != EOF) <%
+        putchar(ch);
+    %>
+    fclose(file);
+    return 0; %>
