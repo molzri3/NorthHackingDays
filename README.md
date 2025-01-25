@@ -6,7 +6,7 @@ Hello all, this is the official write-up for the CTF made by the CyberSecurity a
 
 Special thanks to the authors for their effort in making this idea a reality and for the incredible challenges.
 
-- [DFIR](./DFIR): [molzri3](https://github.com/molzri3)
+- [DFIR](./DFIR):                  [molzri3](https://github.com/molzri3)
 - [Cryptography](./Cryptography):
 - [Web](./Web):
 - [Misc](./Misc):
