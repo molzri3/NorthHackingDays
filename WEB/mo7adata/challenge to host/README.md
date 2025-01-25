@@ -1,0 +1,1 @@
+run ./build.sh and all is good , your man is a docker fan :)
