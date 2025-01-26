@@ -3,8 +3,7 @@ import random
 from SECRET import *
 import time
 
-while (p:=getPrime(351))%4==1:continue
-
+p=getPrime(351)
 seed = random.randint(p // 4, p)
 print(banner)
 print(f"p: {p}")
