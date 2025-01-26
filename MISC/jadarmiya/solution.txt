@@ -12,13 +12,10 @@ int main() <%
     FILE *file;
     char ch;
     file = fopen("flag.txt", "r");
-    if (file == NULL) <%
-        printf("Error: Could not open flag.txt. Make sure the file exists.");
-        return 1;
-    %>
     printf("Content of flag.txt:");
     while ((ch = fgetc(file)) != EOF) <%
         putchar(ch);
     %>
     fclose(file);
     return 0; %>
+//add an empty new line and then submit 
