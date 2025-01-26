@@ -1,0 +1,3 @@
+it's file descriptor vulnrability where you can cat the content of any opened file using the number of the file descriptor .
+
+the path :  /dev/fd/6   the number will be changed if the file descriptors are not empty .
