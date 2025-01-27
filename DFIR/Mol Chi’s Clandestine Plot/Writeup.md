@@ -135,3 +135,58 @@ UPX 4.2.4       Markus Oberhumer, Laszlo Molnar & John Reiser    May 9th 2024
 
 Unpacked 1 file.
 ```
+**by viewing the strings again we can see this** :
+```bash
+strings installer_obfus.exe -n 10  
+!This program cannot be run in DOS mode.
+UAWAVAUATWVSH
+[^_A\A]A^A_]
+:MZuYHcB<H
+Write-Host "Here is a hint:"Write-Host "aHR0cHM6Ly9naXRodWIuY29tL05hamkwNzc="
+C:\ProgramData\Installer
+C:\ProgramData\Installer\script.ps1
+powershell.exe -ExecutionPolicy Bypass -File C:\ProgramData\Installer\script.ps1
+Installing...
+Argument domain error (DOMAIN)
+Argument singularity (SIGN)
+Overflow range error (OVERFLOW)
+Partial loss of significance (PLOSS)
+Total loss of significance (TLOSS)
+The result is too small to be represented (UNDERFLOW)
+Unknown error
+_matherr(): %s in %s(%g, %g)  (retval=%g)
+.
+.
+.
+.
+.....
+```
+The executable contains a PowerShell script with the output
+**Write-Host "Here is a hint:"Write-Host "aHR0cHM6Ly9naXRodWIuY29tL05hamkwNzc="**
+The base64-encoded string **aHR0cHM6Ly9naXRodWIuY29tL05hamkwNzc=** decodes to the URL:
+```bash
+https://github.com/Naji077
+```
+---
+
+## **Step 5: Finding the Second Part of the Flag**
+![image](https://github.com/user-attachments/assets/af3ca436-619b-41b4-9f86-bffef9beb758)
+Once you navigate to the github url you gonna find a repo named "L3abd"
+inside it there is some files 
+
+but the second part of the flag is located in the commits and exactly in the description of the "finally :)" 
+![image](https://github.com/user-attachments/assets/cc6d9455-ee7f-4138-ba93-1f46861b3459)
+
+it's encoded with base 64 
+**XzFmXzRqM2YwejN9**
+```bash
+echo "XzFmXzRqM2YwejN9" | base64 -d
+```
+this outputs : **_1f_4j3f0z3}**
+this gives us the end of the flag but it has no sens because we applied a rot 13 on it 
+after decoding :
+![image](https://github.com/user-attachments/assets/f9d89721-cb35-4996-a843-8dd9fb3cf33a)
+here is the second part of the flag 
+## **_1s_4w3s0m3}**
+and finally here is the full flag 
+### CTF{Usb_r3v3Rs3_1s_4w3s0m3}
