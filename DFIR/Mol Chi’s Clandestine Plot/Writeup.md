@@ -85,4 +85,53 @@ cat flag_part1.txt
 CTF{Usb_r3v3Rs3
 
 ```
-#### Here is the first part of the flag : CTF{Usb_r3v3Rs3
+#### Here we go the first part of the flag : CTF{Usb_r3v3Rs3
+
+---
+
+## **Step 4: Reversing the Executable**
+
+the first thing to do is to use the **strings** command to search for readable text
+```bash
+strings installer.exe | head         
+!This program cannot be run in DOS mode.
+UPX0
+UPX1
+UPX2
+4.22
+UPX!
+F>j|V#
+9e>c
+-r A
+sXF J
+```
+The presence of **UPX0**, **UPX1**, and **UPX2** strongly indicates that the executable is packed with **UPX**.
+Packing is typically used to:
+**Reduce file size**: UPX compresses executables to save storage space and reduce transfer times.
+**Obfuscate code**: While not designed for this purpose, packing can hinder reverse engineering because the packed sections need to be unpacked to access the actual code.
+we can verify easily that our file is packed with upx 
+```bash
+upx -t installer.exe
+
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2024
+UPX 4.2.4       Markus Oberhumer, Laszlo Molnar & John Reiser    May 9th 2024
+
+testing installer_obfus.exe [OK]
+
+Tested 1 file.
+
+```
+Then we unpack it 
+```bash
+upx -d installer.exe                 
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2024
+UPX 4.2.4       Markus Oberhumer, Laszlo Molnar & John Reiser    May 9th 2024
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+    116537 <-     63289   54.31%    win64/pe     installer_obfus.exe
+
+Unpacked 1 file.
+```
