@@ -35,5 +35,34 @@ So here is the structure of the usb drive
 ---
 
 ## **Step 2: Decoding Credentials**
+But before trying to decode the Credentials given let's read the reminder.txt file 
+```bash
+Subject: Important Meeting - Don't Forget!
+
+From: si l'admin mol chi admin@molchi.ma
+To: l3abd l3abd@bladi.dz
+
+Message:
+
+Hey l3abd,
+
+Listen carefully, or rather, read this and engrave it in your mind. The meeting is on Tuesday, February 25th. Donâ€™t forget, or youâ€™ll see what's coming your way. I donâ€™t want any excuses, no "I forgot" or "I had something else to do." Youâ€™ve been warned.
+
+Be there, on time, and prepare everything we need also don't forget to bring with you the secret things that I gived you, you gonna need it !!!. I'm counting on you, but more importantly, Iâ€™m watching you.
+
+Sincerely (if you can call it that),
+Si l'admin
+
+
+```
+This email conveys a strong sense of urgency and authority from "si l'admin mol chi" to "l3abd."
+it indicates That there is a meeting in Tuesday, February 25th and There is a mention of "the secret things I gave you" suggests "l3abd" has possession of critical or confidential materials crucial to the meeting.
+which hints us that we need to use the creds provided in something related to the meeting.
+#### Let's take a look to the provided creds 
+
+```bash
+Si l'admin Mol chi :MDEwMTAwMTEgMDExMDAxMDEgMDExMDAwMTEgMDExMTAxMDEgMDExMTAwMTAgMDExMDAxMDEgMDEwMTAwMDAgMDExMDAwMDEgMDExMTAwMTEgMDExMTAwMTEgMDExMTAxMTEgMDExMDExMTEgMDExMTAwMTAgMDExMDAxMDAgMDAxMTAwMDEgMDAxMTAwMTAgMDAxMTAwMTEgMDAxMDAwMDE=
+
+```
 
 
