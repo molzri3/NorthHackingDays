@@ -58,11 +58,31 @@ Si l'admin
 This email conveys a strong sense of urgency and authority from "si l'admin mol chi" to "l3abd."
 it indicates That there is a meeting in Tuesday, February 25th and There is a mention of "the secret things I gave you" suggests "l3abd" has possession of critical or confidential materials crucial to the meeting.
 which hints us that we need to use the creds provided in something related to the meeting.
-#### Let's take a look to the provided creds 
+#### Let's take a look to the provided creds in creds.txt file
 
 ```bash
 Si l'admin Mol chi :MDEwMTAwMTEgMDExMDAxMDEgMDExMDAwMTEgMDExMTAxMDEgMDExMTAwMTAgMDExMDAxMDEgMDEwMTAwMDAgMDExMDAwMDEgMDExMTAwMTEgMDExMTAwMTEgMDExMTAxMTEgMDExMDExMTEgMDExMTAwMTAgMDExMDAxMDAgMDAxMTAwMDEgMDAxMTAwMTAgMDAxMTAwMTEgMDAxMDAwMDE=
 
 ```
+we can notice that This is a **Base64-encoded string** , let's try to decode it using cyberchef
+![image](https://github.com/user-attachments/assets/27fc867c-c3fa-440f-9de2-5ee7e79c1100)
+as you see it still encoded in binary so now convert the binary code to ASCII text 
+![image](https://github.com/user-attachments/assets/e2bc0638-1f59-4107-bbf5-325689d61565)
+and here we go this is the decoded password : **SecurePassword123!**
 
+---
 
+## **Step 3: Extracting the First Part of the Flag**
+![secret_meeting](https://github.com/user-attachments/assets/358bbd67-cb40-449e-bee3-2f54ad709784)
+
+Use the **passphrase** to extract hidden data from **secret_meeting.jpg** with **steghide**:
+```bash
+steghide extract -sf secret_meeting.jpg                            
+Enter passphrase:
+wrote extracted data to "flag_part1.txt".
+
+cat flag_part1.txt 
+CTF{Usb_r3v3Rs3
+
+```
+#### Here is the first part of the flag : CTF{Usb_r3v3Rs3
