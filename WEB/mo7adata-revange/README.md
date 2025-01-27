@@ -174,6 +174,12 @@ This challenge highlighted the dangers of leaving the Flask debugger enabled in 
 **Note to the Developer: molzri3**  
 This is the first time I’ve encountered a way to bypass the Werkzeug console's IP restriction. I plan to report this issue to the Werkzeug maintainers for further investigation. I hope you enjoyed playing this challenge as much as I did!
 
+**Edit**
+i repport it and it wasnt a vulnurabilty and this was the answer :
+IIRC the Host header check was added to prevent DNS rebinding attacks against a debugger running on localhost, not to restrict access to localhost when the debugger itself is exposed to an untrusted network (which NOBODY SHOULD DO as we very clearly document).
+
+PS: Very cool idea to use an exposed werkzeug debugger as a CTF challenge! :)
+
 ---
 
 ### **References**
