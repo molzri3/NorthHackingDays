@@ -1,1 +1,1 @@
-###CTF{Usb_r3v3Rs3_1s_4w3s0m3}
+CTF{Usb_r3v3Rs3_1s_4w3s0m3}
