@@ -167,11 +167,8 @@ CTF{machakil_f_ta7mil}
 
 ---
 
-### **Conclusion**
+### **Note to the Developer: molzri3**
 
-This challenge highlighted the dangers of leaving the Flask debugger enabled in a production environment. By exploiting the LFI vulnerability and bypassing the Werkzeug console's IP restriction, I was able to achieve Remote Code Execution (RCE) and retrieve the flag.
-
-**Note to the Developer: molzri3**  
 This is the first time I’ve encountered a way to bypass the Werkzeug console's IP restriction. I plan to report this issue to the Werkzeug maintainers for further investigation. I hope you enjoyed playing this challenge as much as I did!
 
 **Edit**
