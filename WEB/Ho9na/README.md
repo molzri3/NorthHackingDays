@@ -1,9 +1,9 @@
 # **Write-Up: Exploiting SQL Injection to Execute Arbitrary Code**
 
 ## **Challenge Description**
-Pentesting isn't a solomente. Gather your team, create aliases, and take control of the world. Java may not be my favorite language, but I always choose coffee every day.
+Pentesting isn't a solomente. Gather your team, create alias, and take control of the world. Java may not be my favorite language, but I always choose coffee every day.
 
-## ** FLAG **
+## **FLAG**
 CTF{khirna_maydir_ghirna_challenge_impermiable_hbibi}
 ---
 
