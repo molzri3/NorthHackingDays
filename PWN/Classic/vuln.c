@@ -1,3 +1,6 @@
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Compilation: gcc -no-pie -fno-stack-protector -o vuln vuln.c --static -z execstack ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
