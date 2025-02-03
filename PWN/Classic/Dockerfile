@@ -6,7 +6,8 @@ RUN useradd -m ctf
 
 WORKDIR /home/ctf
 
-COPY vuln .
+COPY vuln.c .
+RUN gcc -no-pie -fno-stack-protector -o vuln vuln.c --static -z execstack
 COPY flag.txt /flag.txt
 
 
