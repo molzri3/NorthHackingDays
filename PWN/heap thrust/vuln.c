@@ -13,7 +13,7 @@ void win() {
 }
 
 void default_func() {
-    printf("Default function called.\n");
+    printf("No pain No gain, push harder ......\n");
 }
 
 int main() {
