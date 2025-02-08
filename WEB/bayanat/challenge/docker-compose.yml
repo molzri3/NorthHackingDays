@@ -1,0 +1,25 @@
+services:
+  web:
+    build: .
+    ports:
+      - "9000:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: zxcdqwe123@
+      DB_NAME: sqlgame
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: zxcdqwe123@
+      MYSQL_DATABASE: sqlgame 
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
