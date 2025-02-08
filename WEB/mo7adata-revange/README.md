@@ -5,7 +5,7 @@
 mo7adata was mid i beet you solve this one :) , Revenge baby ;)
 
 ## flag 
-CTF{machakil_f_ta7mil}
+NHD{machakil_f_ta7mil}
 
 ## Write-up 
 
@@ -162,7 +162,7 @@ Sorry for wasting your time, but if you’re curious about what I was trying to 
 - https://www.daehee.com/werkzeug-console-pin-exploit/    
 
 Here is your flag:
-CTF{machakil_f_ta7mil}
+NHD{machakil_f_ta7mil}
 ```
 
 ---

@@ -73,4 +73,4 @@ Output: The contents of flag.txt.
 
 ## FLAG 
 
-CTF{khoya_7na_mzrobin_3tih_flag_a_rabi3a}
+NHD{khoya_7na_mzrobin_3tih_flag_a_rabi3a}
