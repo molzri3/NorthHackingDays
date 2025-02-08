@@ -5,7 +5,7 @@ Pentesting isn't a solomente. Gather your team, create alias, and take control o
 
 ## **FLAG**
 
-CTF{khirna_maydir_ghirna_challenge_impermiable_hbibi}
+NHD{khirna_maydir_ghirna_challenge_impermiable_hbibi}
 
 ---
 
