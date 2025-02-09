@@ -1,7 +1,7 @@
 # Writhup - Very_secure
 
 ## Description
-only admin should see what s hidding and get the flag otherwise you r note allowed 
+only admin should see what s hidding and get the flag otherwise you r not allowed 
 
 ## Setup Instructions
 1. Build the Docker container:
