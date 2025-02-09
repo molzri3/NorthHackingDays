@@ -9,6 +9,10 @@ NHD{khirna_maydir_ghirna_challenge_impermiable_hbibi}
 
 ---
 
+## **not from molzri3**
+This challenge is inspired by the 'Pentester Notes' from HackTheBox. I played it, had a lot of fun, and decided to include it in the CTF. Thanks to @HackTheBox for the inspiration
+
+
 ## **Vulnerability Analysis**
 ### **1. Vulnerable Endpoint**
 The endpoint `/api/mola7ada` is vulnerable to SQL injection due to improper handling of user input in the `name` parameter. The backend code directly concatenates user input into the SQL query without proper sanitization or parameterization.
