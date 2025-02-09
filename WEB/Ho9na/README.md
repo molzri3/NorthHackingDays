@@ -9,7 +9,7 @@ NHD{khirna_maydir_ghirna_challenge_impermiable_hbibi}
 
 ---
 
-## **not from molzri3**
+## **Note from molzri3**
 This challenge is inspired by the 'Pentester Notes' from HackTheBox. I played it, had a lot of fun, and decided to include it in the CTF. Thanks to @HackTheBox for the inspiration
 
 
