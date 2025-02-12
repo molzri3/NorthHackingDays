@@ -1,3 +1,4 @@
 Description:
-we wanted to see how long fik douda.
+We wanted to see how long the biggest python ever was.
+
 Enjoy this Brainache.
