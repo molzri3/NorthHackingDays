@@ -51,3 +51,7 @@ if s.check() == sat:
     print(b)
 else:
     print("No solution found")
+
+
+
+#NHD{W4L4Yn1_H4rb4n_m0h1m_R3sp3ct_BRo}
