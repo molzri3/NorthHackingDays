@@ -1,5 +1,8 @@
 from z3 import *
 
+#flag:
+#NHD{W4L4Yn1_H4rb4n_m0h1m_R3sp3ct_BRo}
+
 s = Solver()
 
 coupon = [BitVec(f"coupon_{i}", 8) for i in range(37)]
@@ -54,4 +57,3 @@ else:
 
 
 
-#NHD{W4L4Yn1_H4rb4n_m0h1m_R3sp3ct_BRo}
