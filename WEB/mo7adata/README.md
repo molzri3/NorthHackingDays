@@ -4,7 +4,7 @@
 
 ## Challenge Description
 
-While performing web penetration testing, it's crucial to remain stealthy and avoid drawing unnecessary attention. Remember, the challenge itself might be straightforward, but the real skill lies in how you uncover the vulnerabilities without alerting others. Always strive to be the one who finds the fruit while others remain unaware of its existence.  
+Mo7adata is the next multibillion-dollar project built by molZri3, as always. He said it's super secure, and even he can't break it to get the flag. Do you think the same? 
 
 ---
 
@@ -73,4 +73,4 @@ Output: The contents of flag.txt.
 
 ## FLAG 
 
-CTF{khoya_7na_mzrobin_3tih_flag_a_rabi3a}
+NHD{khoya_7na_mzrobin_3tih_flag_a_rabi3a}

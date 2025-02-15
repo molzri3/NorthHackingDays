@@ -1,11 +1,17 @@
 # **Write-Up: Exploiting SQL Injection to Execute Arbitrary Code**
 
 ## **Challenge Description**
-Pentesting isn't a solomente. Gather your team, create aliases, and take control of the world. Java may not be my favorite language, but I always choose coffee every day.
+Pentesting isn't a solomente. Gather your team, create alias, and take control of the world. Java may not be my favorite language, but I always choose coffee every day.
 
-## ** FLAG **
-CTF{khirna_maydir_ghirna_challenge_impermiable_hbibi}
+## **FLAG**
+
+NHD{khirna_maydir_ghirna_challenge_impermiable_hbibi}
+
 ---
+
+## **Note from molzri3**
+This challenge is inspired by the 'Pentester Notes' from HackTheBox. I played it, had a lot of fun, and decided to include it in the CTF. Thanks to @HackTheBox for the inspiration
+
 
 ## **Vulnerability Analysis**
 ### **1. Vulnerable Endpoint**
@@ -104,43 +110,3 @@ curl -X POST \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "name=test'; CALL EXECVE('ls /'); --"
 ```
-
----
-
-## **Mitigation Recommendations**
-1. **Use Parameterized Queries:**
-   Replace the vulnerable query with a parameterized query to prevent SQL injection:
-   ```java
-   String query = "SELECT * FROM mola7adat WHERE name = :name";
-   List<Object[]> resultList = entityManager.createNativeQuery(query)
-                                           .setParameter("name", name)
-                                           .getResultList();
-   ```
-
-2. **Restrict MySQL Privileges:**
-   - Revoke the `CREATE` and `EXECUTE` privileges from the MySQL user:
-     ```sql
-     REVOKE CREATE, EXECUTE ON *.* FROM 'root'@'%';
-     FLUSH PRIVILEGES;
-     ```
-   - Use a dedicated MySQL user with limited privileges for the application.
-
-3. **Input Validation:**
-   Validate the `name` parameter to ensure it contains only allowed characters:
-   ```java
-   if (!name.matches("[a-zA-Z0-9]+")) {
-       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid name");
-   }
-   ```
-
-4. **Error Handling:**
-   Avoid exposing detailed error messages to the user. Log errors on the server instead.
-
----
-
-## **Conclusion**
-The SQL injection vulnerability in the `/api/mola7ada` endpoint allowed an attacker to execute arbitrary code on the server using the `CREATE ALIAS` technique. By exploiting this vulnerability, the attacker was able to execute system commands and retrieve sensitive information.
-
-To prevent such vulnerabilities, always use parameterized queries, restrict MySQL privileges, and validate user input. Regularly test your application for security vulnerabilities using tools like OWASP ZAP or Burp Suite.
-
----

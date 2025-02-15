@@ -7,8 +7,8 @@ Hello all, this is the official write-up for the CTF made by the CyberSecurity a
 Special thanks to the authors for their effort in making this idea a reality and for the incredible challenges.
 
 - [DFIR](./DFIR):                  
-- [Cryptography](./Cryptography):
-- [Web](./Web): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[molzri3](https://github.com/molzri3)
-- [Misc](./Misc):
-- [Reverse Engineering](./Reverse_Engineering):
+- [Cryptography](./CRYPTO):
+- [Web](./WEB): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[molzri3](https://github.com/molzri3)
+- [Misc](./MISC):
+- [Reverse Engineering](./REVENG):
 - [PWN](./PWN):
