@@ -1,8 +1,8 @@
-#Steganography and OSINT Challenge: Find the Hidden Flag
+# Steganography and OSINT Challenge: Find the Hidden Flag
 
 Welcome to the Steganography and OSINT Challenge! In this challenge, you will combine your skills in cryptography, steganography, and open-source intelligence (OSINT) to uncover a hidden flag. Follow the steps below to solve the puzzle and claim your victory!
 
-##Challenge Overview
+## Challenge Overview
 
 Decrypt the Initial Text: You will start with an encrypted text. Your first task is to decrypt it using a provided cipher or method.
 
