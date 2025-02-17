@@ -45,7 +45,7 @@ Archive:  profiles.zip
 
 ```bash
 sudo modprobe nbd
-sudo qemu-nbd --connect=/dev/nbd0 firefox.vhdx
+sudo qemu-nbd --connect=/dev/nbd0 firefox_profiles.vhdx
 sudo mount /dev/nbd0p1 /mnt/vhdx
 
 cd /mnt/vhdx
@@ -276,3 +276,90 @@ here you can notice a hidden directory named **.hidden**
 ![image](https://github.com/user-attachments/assets/46f4f5c9-1330-4e19-ba0f-2c68eed41440)
 
 As you see here this directory contains the flag.zip but it's protected with the password of the user that we should find its credentials
+
+## **Decrypting user profile credentials**
+
+Now if you check the directories you'll notice that all of them are empty except **Rafik.Boubker** directory
+
+![image](https://github.com/user-attachments/assets/eb865df6-2e04-4de4-b2fd-099c0a2f914c)
+
+#### Now we should decrypt Mozilla protected passwords 
+by searching a little you can find this amazing tool https://github.com/lclevy/firepwd.git
+**clone the repo**
+then run the script
+```bash
+python firepwd.py -d /mnt/vhdx/Rafik.Boubker/profiles 
+
+globalSalt: b'd7c4533f35d54acefc1c4f1845403d6112ad281b'
+ SEQUENCE {
+   SEQUENCE {
+     OBJECTIDENTIFIER 1.2.840.113549.1.5.13 pkcs5 pbes2
+     SEQUENCE {
+       SEQUENCE {
+         OBJECTIDENTIFIER 1.2.840.113549.1.5.12 pkcs5 PBKDF2
+         SEQUENCE {
+           OCTETSTRING b'21bde4508688d2fddd9af5f46f4417174fd3c680afff1f33109d4afed6efa316'
+           INTEGER b'01'
+           INTEGER b'20'
+           SEQUENCE {
+             OBJECTIDENTIFIER 1.2.840.113549.2.9 hmacWithSHA256
+           }
+         }
+       }
+       SEQUENCE {
+         OBJECTIDENTIFIER 2.16.840.1.101.3.4.1.42 aes256-CBC
+         OCTETSTRING b'4af4135413a3dcbfbe8be5a261bc'
+       }
+     }
+   }
+   OCTETSTRING b'b81bb26a18afa9c907e0fbbbe168b701'
+ }
+clearText b'70617373776f72642d636865636b0202'
+password check? True
+ SEQUENCE {
+   SEQUENCE {
+     OBJECTIDENTIFIER 1.2.840.113549.1.5.13 pkcs5 pbes2
+     SEQUENCE {
+       SEQUENCE {
+         OBJECTIDENTIFIER 1.2.840.113549.1.5.12 pkcs5 PBKDF2
+         SEQUENCE {
+           OCTETSTRING b'862db7261298b6ae35a5b75c6e037022037a853fb1309aaa0c007d13c90b8435'
+           INTEGER b'01'
+           INTEGER b'20'
+           SEQUENCE {
+             OBJECTIDENTIFIER 1.2.840.113549.2.9 hmacWithSHA256
+           }
+         }
+       }
+       SEQUENCE {
+         OBJECTIDENTIFIER 2.16.840.1.101.3.4.1.42 aes256-CBC
+         OCTETSTRING b'f4b20c4e677efa934aaf67957499'
+       }
+     }
+   }
+   OCTETSTRING b'1993fca7a9e176ca887917105d21af967f65018715856ac24730af0e45b76a78'
+ }
+clearText b'a1190d07ce38916ee51a6123615b2502493819d0fd8fd6510808080808080808'
+decrypting login/password pairs
+ http://git.ifrit.vl:b'jack.smith@ifrit.vl',b'JigokuNoKaen10'
+
+```
+And as you see we successfully decrypted the login/password pairs 
+***http://git.ifrit.vl:b'jack.smith@ifrit.vl',b'JigokuNoKaen10'***
+so this password : **JigokuNoKaen10** will be used to unzip the **flag.zip** file
+
+```bash
+┌──(root㉿kali)-[/mnt/vhdx/.hidden]
+└─# unzip flag.zip        
+Archive:  flag.zip
+[flag.zip] flag.txt password: 
+ extracting: flag.txt                
+                                                                                                       
+┌──(root㉿kali)-[/mnt/vhdx/.hidden]
+└─# cat flag.txt   
+NHD{R2fiK_B0uBk3r_PasSw0rd_L3aK3d}
+
+```
+----
+And here we goo here is the flag : **NHD{R2fiK_B0uBk3r_PasSw0rd_L3aK3d}**
+----
