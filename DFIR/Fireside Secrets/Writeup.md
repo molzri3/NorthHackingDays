@@ -44,6 +44,9 @@ Archive:  profiles.zip
 ### Now we need to mount the disk to our machine and explore its content
 
 ```bash
+sudo modprobe nbd
+sudo qemu-nbd --connect=/dev/nbd0 firefox.vhdx
+sudo mount /dev/nbd0p1 /mnt/vhdx
 
 cd /mnt/vhdx
 ls -la 
