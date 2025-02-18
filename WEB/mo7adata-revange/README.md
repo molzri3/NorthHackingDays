@@ -45,7 +45,7 @@ This makes it difficult to guess the flag file's name directly.
 After some testing, I found that I could read the application logs using the LFI vulnerability:
 
 ```
-http://192.168.11.113:5000/get_profile_pic?filename=./logs/logs.txt
+http://192.168.11.113:5000/get_profile_pic?pic=./logs/logs.txt
 ```
 
 The output revealed the following:

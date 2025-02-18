@@ -3,16 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pentest Checklist</title>
+    <title>Ho9na</title>
     <link rel="stylesheet" href="/Css/main.css">
+    <style>
+        /* Additional styles for better UI/UX */
+        .checklist__item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffcc00;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .checklist__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        .checklist__item a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .checklist__item a:hover {
+            color: #ffffff;
+        }
+
+        .checklist__item-content {
+            font-size: 16px;
+            color: #ffffff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            -webkit-box-orient: vertical;
+        }
+
+        .checklist__item-content.expanded {
+            -webkit-line-clamp: unset; /* Show full content when expanded */
+        }
+
+        .checklist__item button {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .checklist__item button:hover {
+            background-color: #e6b800;
+        }
+
+        .no-items {
+            color: #ffcc00;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <div class="app">
     <main>
         <section class="checklist">
             <div class="checklist__container">
-                <div class="checklist__desc">Pentest Checklist</div>
+                <div class="checklist__desc">Recipes lmla7</div>
                 <div class="checklist__list" id="checklist">
+                    <!-- Checklist items will be populated here -->
                 </div>
             </div>
         </section>
@@ -25,7 +91,7 @@
             .then(data => {
                 const checklist = document.getElementById('checklist');
                 if (data.length === 0) {
-                    checklist.innerHTML = '<p>No checklist items available.</p>';
+                    checklist.innerHTML = '<p class="no-items">No checklist items available.</p>';
                 } else {
                     data.forEach(item => {
                         const checklistItem = document.createElement('div');
@@ -33,21 +99,31 @@
 
                         // Create a clickable note link
                         const noteLink = document.createElement('a');
-                        noteLink.href = `/mola7ada?name=${encodeURIComponent(item.mola7ada)}`;
-                        noteLink.textContent = `Note: ${item.mola7ada}`;
-                        noteLink.style.cursor = 'pointer'; // Optional: Change cursor style to indicate clickable
+                        noteLink.href = `/mola7ada?name=${encodeURIComponent(item.Note)}`;
+                        noteLink.textContent = `Note: ${item.Note}`; // Use the name instead of the full text
 
                         // Add event listener to handle click event
-                        noteLink.addEventListener('click', function(event) {
-                            event.preventDefault(); // Prevent default link behavior
-                            window.location.href = noteLink.href; // Redirect to the note details page
-                        });
+                        //noteLink.addEventListener('click', function (event) {
+                        //    event.preventDefault();
+                        //    window.location.href = noteLink.href;
+                        //});
 
+                        // Create a container for the content
                         const itemContent = document.createElement('div');
-                        itemContent.textContent = `mola7ada: ${item.mola7ada}`;
+                        itemContent.classList.add('checklist__item-content');
+                        itemContent.textContent = item.mola7ada;
+
+                        // Add a "Read More" button for long text
+                        const readMoreButton = document.createElement('button');
+                        readMoreButton.textContent = 'Read More';
+                        readMoreButton.addEventListener('click', function () {
+                            itemContent.classList.toggle('expanded');
+                            readMoreButton.textContent = itemContent.classList.contains('expanded') ? 'Read Less' : 'Read More';
+                        });
 
                         checklistItem.appendChild(noteLink);
                         checklistItem.appendChild(itemContent);
+                        checklistItem.appendChild(readMoreButton);
 
                         checklist.appendChild(checklistItem);
                     });
