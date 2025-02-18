@@ -1,0 +1,11 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY . /app
+
+EXPOSE 4444
+
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "challenge.py"]
