@@ -46,8 +46,15 @@ you can easily find his instagram page
 
 ![image](https://github.com/user-attachments/assets/aaf94fae-1f1c-4ebf-b8a8-e9ab95fb9eb7)
 
-**by scroling down we can fid this post that was posted in 20 january**
+**by scroling down we can find this post that was posted in 20 january**
 
 ![image](https://github.com/user-attachments/assets/6650947a-f61f-4a9e-ba90-399715bee519)
 
+**let's take a screenshoot and do a reverse image search with google image**
+
+![image](https://github.com/user-attachments/assets/7ef72f0e-cbe7-4758-86b6-64b5d85c3d46)
+
+here I found a place similar to the one in the picture 
+
+![image](https://github.com/user-attachments/assets/60b02964-1cd6-4a04-88c2-d7973d6dab64)
 
