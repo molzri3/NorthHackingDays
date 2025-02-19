@@ -46,6 +46,6 @@ you can easily find his instagram page
 
 ![image](https://github.com/user-attachments/assets/aaf94fae-1f1c-4ebf-b8a8-e9ab95fb9eb7)
 
-by scroling down we can fid this post that was posted in 20 january
+**by scroling down we can fid this post that was posted in 20 january**
 
 ![image](https://github.com/user-attachments/assets/6650947a-f61f-4a9e-ba90-399715bee519)
