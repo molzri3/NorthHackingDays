@@ -54,7 +54,19 @@ you can easily find his instagram page
 
 ![image](https://github.com/user-attachments/assets/7ef72f0e-cbe7-4758-86b6-64b5d85c3d46)
 
-here I found a place similar to the one in the picture 
+here I found a place similar to the one in the picture (the buildings,mc donalds..)
 
 ![image](https://github.com/user-attachments/assets/60b02964-1cd6-4a04-88c2-d7973d6dab64)
+
+this place is **Guéliz** which is in **Marrakech**
+
+so let's search for **mc donalds** nearby **Guéliz** 
+
+from this picture we can recognize **Maroc telecom** and **Mc donald's**
+
+![WhatsApp Image 2025-02-20 à 00 33 08_1d0d8ea0](https://github.com/user-attachments/assets/47a34365-0327-4bd5-ae1b-747f30bb5f3b)
+
+which are shown here in the map 
+
+![WhatsApp Image 2025-02-20 à 00 10 56_853195f2](https://github.com/user-attachments/assets/f8ef0b12-a678-49b4-a268-e215e4eaf62f)
 
