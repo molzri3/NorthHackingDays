@@ -8,3 +8,5 @@ A secret message was **sent through an encryption chip** in a simulated circuit,
 - **A circuit diagram (image)** showing the connections.
 - **The original Arduino code (before encryption)** to understand how the flag is processed.
 - **The encrypted output (`output.txt`)** to analyze and decrypt.
+
+flag = 'NHD{H4ARDW4AR3_IS_LIFE_AND_LIFE_IS_XOR}' 
