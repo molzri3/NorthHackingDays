@@ -15,8 +15,8 @@ Welcome to the Steganography and OSINT Challenge! In this challenge, you will co
 
 Decrypt the Initial Text: You will start with an encrypted text. Your first task is to decrypt it using a provided cipher or method.
 
-OSINT Investigation: The decrypted text will lead you to a Twitter account. Use OSINT techniques to find a specific post on this account.
+OSINT Investigation: The decrypted text will lead you to a Twitter account named " alexiss56089 ". Use OSINT techniques to find a specific post on this account.
 
-Find the Key: In the comments of the post, look for a mention of someone named "Naji." The key to decrypt the final image will be hidden there.
+Find the Key: In the comments of the post, look for an account named "Naji" The key to decrypt the final image will be hidden there in a comment of the last post there.
 
 Decrypt the Image: Use the key to decode a steganographic image and retrieve the hidden flag.
