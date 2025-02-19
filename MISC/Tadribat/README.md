@@ -1,4 +1,4 @@
-🟢 Description : 16 corrupted PNG images hide a secret—Can you uncover what’s truly hidden.
+🟢 Description : 16 corrupted PNG images hide a secret—Can you uncover what’s truly hidden?
 
 FILES TO UPLOAD : TADRIBAT.7z
 
