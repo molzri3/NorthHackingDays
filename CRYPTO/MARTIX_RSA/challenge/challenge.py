@@ -1,5 +1,7 @@
-from hidden.secret_matrix import SECRET_MATRIX
+from secret_matrix import SECRET_MATRIX
 import numpy as np
+from Crypto.Util.number import getPrime
+
 
 def encrypt_flag(flag):
     pad_len = (3 - (len(flag) % 3)) % 3
@@ -10,8 +12,8 @@ def encrypt_flag(flag):
     return encrypted.astype(np.uint8).flatten().tobytes()
 
 def rsa_encrypt_matrix():
-    p = 123456789101112167
-    q = 123456789101112109
+    p = getPrime(60)
+    q = getPrime(60)
     N = p * q
     e = 65537
     
@@ -20,13 +22,13 @@ def rsa_encrypt_matrix():
     return N, e, encrypted
 
 if __name__ == "__main__":
-    with open("flag.txt", "r") as f:
+    with open("challenge\\flag.txt", "r") as f:
         flag = f.read().strip()
     
     flag_ciphertext = encrypt_flag(flag)
     N, e, rsa_matrix = rsa_encrypt_matrix()
     
     with open("output.txt", "wb") as f:
-        f.write(flag_ciphertext)
+        f.write(flag_ciphertext.hex().encode())
         f.write(f"\n\nRSA_N={N}\nRSA_e={e}\nMATRIX=".encode())
         f.write(','.join(map(str, rsa_matrix)).encode())
