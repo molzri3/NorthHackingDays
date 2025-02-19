@@ -4,5 +4,5 @@ i hope you liked and enjoyed playing this challegnes and it was good for you to 
  
 NOT ALL OF THEM I'm also here DUDE !!!
 JUST KIDDING GUYS!
-# Hello everybody, This is ME!!! (I don't choose yet my nickname so I'm just use my Github name "SobFoxx") 
+# Hello everybody, This is ME!!! (I don't choose my nickname yet so I'm just use my Github name "SobFoxx") 
 I hope you enjoyed my VERY EASY challenges and my VERY WELL EXPLAINED writeups!!! 
