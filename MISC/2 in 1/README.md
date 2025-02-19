@@ -1,5 +1,6 @@
 # Description 
 you have two steps to see the flag :) 
+files to upload : flag.txt
 
 # Flag
 NHD{3endek_M3a_HAdxi_Dyal_Misc}
