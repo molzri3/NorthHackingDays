@@ -1,6 +1,9 @@
 # Description 
 look for the key it could be with anyone and everywhere , you have a entry point in challenge-Osint.py
 
+# Flag
+NHD{W444444_H4$$4444AAN_Rak_3ajebni}
+
 # Steganography and OSINT Challenge: Find the Hidden Flag
 
 Welcome to the Steganography and OSINT Challenge! In this challenge, you will combine your skills in cryptography, steganography, and open-source intelligence (OSINT) to uncover a hidden flag. Follow the steps below to solve the puzzle and claim your victory!
