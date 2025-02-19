@@ -11,3 +11,5 @@ A secret message was **sent through an encryption chip** in a simulated circuit,
 
  
 hint = https://www.onsemi.com/pdf/datasheet/mm74hc86-d.pdf
+
+### FLAG : NHD{H4ARDW4AR3_IS_LIFE_AND_LIFE_IS_XOR}
