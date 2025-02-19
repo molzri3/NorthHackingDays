@@ -14,42 +14,39 @@ class FileValidationServer:
 
     def response(self, conn, message):
         """Send a message to the client."""
-        conn.sendall(message + b"\n")  # Ensure newline for proper display in netcat
-
+        conn.sendall(message + b"\n")  
     def handle_client(self, conn, addr):
         """Handle individual client connections."""
         file_name = b"xi_l3ayba.txt"
 
         try:
-            conn.settimeout(30)  # ✅ Replaces `signal.alarm(30)`
+            conn.settimeout(30)  
 
             self.response(conn, b"Enter filename: ")
             i = 0
             while i < len(file_name):
                 c = conn.recv(1)
-                if not c:  # Client disconnected
+                if not c: 
                     return
                 elif c != file_name[i:i+1]:
                     self.response(conn, b"Incorrect filename.")
                     return
                 i += 1
 
-            if conn.recv(1) != b'\n':  # Ensure proper newline
+            if conn.recv(1) != b'\n': 
                 self.response(conn, b"Incorrect filename.")
                 return
 
             self.response(conn, b"Valid Filename :)")
 
-            # Check if file exists
             if not os.path.isfile(file_name.decode()):
                 self.response(conn, b"File not found.")
                 return
             
             self.response(conn, b"File validated successfully.")
 
-            # Send file content in chunks
             with open(file_name.decode(), "rb") as file:
-                while chunk := file.read(1024):  # Read in 1KB chunks
+                while chunk := file.read(1024):  
                     conn.sendall(chunk)
 
             self.response(conn, b"[END OF FILE]")

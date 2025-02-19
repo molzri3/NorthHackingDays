@@ -23,7 +23,7 @@ def main():
         for ch in input_code:
             if ch in ['[', ']', '{', '}', '\\', '#']:
                 print("Ma3endek zher abana !!")
-                return  # Exit the function if any restricted character is found
+                return  
             else:
                 file.write(ch)
 

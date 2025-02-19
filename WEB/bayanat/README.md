@@ -1,6 +1,3 @@
-Here’s the corrected and improved version of your writeup in a clean and professional format:
-
----
 
 # Bayanat
 
