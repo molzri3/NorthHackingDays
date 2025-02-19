@@ -70,3 +70,18 @@ which are shown here in the map
 
 ![WhatsApp Image 2025-02-20 à 00 10 56_853195f2](https://github.com/user-attachments/assets/f8ef0b12-a678-49b4-a268-e215e4eaf62f)
 
+And we can also recognize here the brown **"Zelij"** and we can identify the exact place from the photo was taken 
+
+![image](https://github.com/user-attachments/assets/49d9c416-51c4-4b16-8955-1f04420ebfd7)
+
+**Now it's time to identify the mosque**
+
+by searching about the nearby mosques we found these result 
+
+![image](https://github.com/user-attachments/assets/a5337385-c0de-46c0-aa66-795babc0fa18)
+
+and since in the challenge description the mosque is carrying the name of an old moroccan king so it's exactly 
+**Hassan II mosque** 
+
+
+**JXMR+QR9, Rue el Imam Malik, Marrakech 40000**
