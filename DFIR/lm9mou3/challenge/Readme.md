@@ -11,6 +11,7 @@ Not far from there, a mosque stands, carrying the name of an old Moroccan king. 
 🔗 [Download the file](https://we.tl/t-HRTaK9sYE4)  
 
 **Flag Format : NHD{JX9P+W2M, Rue Ibn Khaldoun, Casablanca 20000}**
+
 **Good luck! 😉**  
 
 ### Author: *TheSurViv3r*  
