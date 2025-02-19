@@ -9,6 +9,6 @@ Special thanks to the authors for their effort in making this idea a reality and
 - [DFIR](./DFIR):  [TheSurViv3r](https://github.com/Naji077)               
 - [Cryptography](./CRYPTO):
 - [Web](./WEB): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[molzri3](https://github.com/molzri3)
-- [Misc](./MISC): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[F1Z3R](https://github.com/F1Z3R)
+- [Misc](./MISC): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[F1Z3R](https://github.com/F1Z3R)   [SobFoxx](https://github.com/SobFoxx)
 - [Reverse Engineering](./REVENG):
 - [PWN](./PWN):
