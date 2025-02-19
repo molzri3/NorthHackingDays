@@ -1,3 +1,6 @@
+🟢 Description : 16 corrupted PNG images hide a secret—Can you uncover what’s truly hidden.
+FILES TO UPLOAD : tadribat.zip
+
 # **Walkthrough: Tadribat**
 
 ### **Step 1: Understanding the Challenge**
@@ -26,4 +29,3 @@ Upon running the XOR brute-force attack, one of the key candidates successfully 
 
 🟢 **Flag: `CTF{h3x_X0r_fun}`**
 
-🟢 Description : 16 corrupted PNG images hide a secret—Can you uncover what’s truly hidden.
