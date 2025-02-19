@@ -2,7 +2,7 @@
 you have two steps to see the flag :) 
 
 # Flag
-NHD{#endek_M3a_HAdxi_Dyal_Misc}
+NHD{3endek_M3a_HAdxi_Dyal_Misc}
 
 # XOR Cipher Brute Force Solution
 
