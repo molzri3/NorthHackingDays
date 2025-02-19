@@ -83,5 +83,12 @@ by searching about the nearby mosques we found these result
 and since in the challenge description the mosque is carrying the name of an old moroccan king so it's exactly 
 **Hassan II mosque** 
 
+![image](https://github.com/user-attachments/assets/2d33a54d-e963-4d96-913a-d79e81dedc6f)
 
+#### And it's exact address is : 
 **JXMR+QR9, Rue el Imam Malik, Marrakech 40000**
+----
+And finally here we go the flag 
+---
+***NHD{JXMR+QR9, Rue el Imam Malik, Marrakech 40000}***
+---
