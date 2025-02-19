@@ -31,5 +31,11 @@ let's try to correct the hex values and save the file in a solution.wav
 
 ![image](https://github.com/user-attachments/assets/077e3b3a-b326-49f1-b4bb-07b012ad66b2)
 
+## **OSINT Investigation (Finding the Instagram Post)🕵️**
 
+I think it's easy to recognize the song but in case you didn't recognize it you can use this website 
+**https://aha-music.com/**
 
+![image](https://github.com/user-attachments/assets/9e21af13-ff0b-4b9b-861d-3e8ea35a9930)
+
+So as you see here this song belongs to **Sy Mehdi😂**
