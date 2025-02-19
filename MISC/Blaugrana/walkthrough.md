@@ -12,7 +12,8 @@ exiftool blaugrana.wav
 
 This will display all the metadata stored in the file.
 
-![image.png](attachment:52310c74-60e8-4847-b11a-a0f7ed48f19b:image.png)
+![image](https://github.com/user-attachments/assets/6e590025-83e7-42aa-a4bc-b54e2f9af75c)
+
 
 📌 **What you’re looking for:**
 
@@ -32,7 +33,8 @@ The bot will respond with a welcome message. Now, type:
 
 This will show you a list of available commands.
 
-![image.png](attachment:cd9c9251-27df-47ae-8d80-89d599e27f82:image.png)
+![image](https://github.com/user-attachments/assets/64242fa7-53da-4266-a494-550dea003b12)
+
 
 One of the most important commands is:
 
@@ -48,7 +50,7 @@ To get a clue, type:
 /hint
 ```
 
-![image.png](attachment:43608ad5-16ad-4430-95a3-c76e045ff80e:image.png)
+![image](https://github.com/user-attachments/assets/0eeb0180-5d97-4201-8ffa-7f15fb9c47a7)
 
 📌 **What the hint tells you:**
 
@@ -57,5 +59,5 @@ To get a clue, type:
 
 At this point, you still don’t have everything you need. Let’s go back to the original `blaugrana.wav` file and dig deeper.
 
-> TO BE CONTINUED!
+> TO BE CONTINUE!
 >
