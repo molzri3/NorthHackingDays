@@ -88,7 +88,7 @@ and since in the challenge description the mosque is carrying the name of an old
 #### And it's exact address is : 
 **JXMR+QR9, Rue el Imam Malik, Marrakech 40000**
 ----
-And finally here we go the flag 
+And finally here we is the flag 
 ---
 ***NHD{JXMR+QR9, Rue el Imam Malik, Marrakech 40000}***
 ---
