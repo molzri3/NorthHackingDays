@@ -10,3 +10,4 @@ A secret message was **sent through an encryption chip** in a simulated circuit,
 - **The encrypted output (`output.txt`)** to analyze and decrypt.
 
 flag = 'NHD{H4ARDW4AR3_IS_LIFE_AND_LIFE_IS_XOR}' 
+hint = https://www.onsemi.com/pdf/datasheet/mm74hc86-d.pdf
