@@ -7,3 +7,5 @@ Stop and remove container
       sudo docker rm CONTAINER ID
 for debuging purposes:
 sudo docker run -it --rm pnw-test2-challenge /bin/sh
+
+compilation camand:gcc -m32 -D_GNU_SOURCE -std=gnu89 -fno-stack-protector -no-pie -o vuln vuln.c
