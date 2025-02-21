@@ -21,7 +21,7 @@ def compile_and_run(input_file):
         except subprocess.CalledProcessError as e:
             return f"Program execution failed: {e.output.decode('utf-8')}"
     else:
-        return "Compilation failed. Please check the source code."
+        return "Compilation failed. Please call the owner of the challenge."
 
 def handle_client(client_socket):
     try:
