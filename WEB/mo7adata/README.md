@@ -1,4 +1,4 @@
-# CTF Challenge: mola7ada
+# CTF Challenge: mo7adata
 
 
 
