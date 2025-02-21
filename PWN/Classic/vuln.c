@@ -11,19 +11,19 @@
 char flag[FLAGSIZE_MAX];
  
 void sigsegv_handler(int sig) {
-    printf("**********Good_Job**********");
-    fflush(stdout);
+    printf("**********hak0 had lflag olmra jaya kono kathalaw:");
     printf("%s", flag);
+    printf("**********");
     fflush(stdout);
     exit(3);
 }
  
 void vuln(){
         char buf1[333];
-	printf("MY_Plate: ");
+	printf("[+]3tini_n3tik: ");
 	fflush(stdout);
 	gets(buf1); 
-	printf("bruuh! feed me more ......\n");
+	printf("[+]ah ah ch7al z9ramin , sf ghayroha ......\n");
   
 
 }
