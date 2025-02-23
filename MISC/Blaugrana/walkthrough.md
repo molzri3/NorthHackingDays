@@ -59,5 +59,72 @@ To get a clue, type:
 
 At this point, you still don’t have everything you need. Let’s go back to the original `blaugrana.wav` file and dig deeper.
 
-> TO BE CONTINUE!
->
+### **Step 3: Extracting a Hidden Audio File**
+
+The `blaugrana.wav` file actually contains another **hidden** audio file inside it. You need a tool to find the embedded files within the original audio( steghide,binwalk..)
+
+After crack just the password of zip file it’s very easy to crack there’s various tools to do tha
+
+💡 **Hint:** Try common words. The password is **"password"** (yes, it’s that simple).
+
+Now you have a new file: **`hidden_audio.wav`**.
+
+---
+
+### **Step 4: Decoding the Morse Code**
+
+If you listen to `hidden_audio.wav`, you’ll hear a series of beeps and pauses. This is **Morse code**.
+
+Instead of decoding it manually, you can use an **online Morse code decoder**:
+
+- Upload the file to https://morsecode.world/international/decoder/audio-decoder.html
+- The output will be:
+    
+    ```
+    VISCABARC
+    ```
+    
+
+📌 **Important:** Remember this word—**"VISCABARCA"**—you will need it soon.
+
+---
+
+### **Step 5: Solving the Modular Arithmetic Puzzle**
+
+The hint from the bot talked about summing the **ASCII values** of a word and using **modular arithmetic** with **212**.
+
+Let’s calculate it:
+
+Open Python and run this:
+
+```python
+sum(ord(c) for c in "VISCABARCA") % 212
+```
+
+This will give you a **specific number** (let’s call it `X`).
+
+---
+
+### **Step 6: Bypassing the Bot’s Security**
+
+Now that you have the number `X`, go back to the bot and type:
+
+```
+/get_flag X
+```
+
+If you calculated it correctly, the bot will respond:
+
+```
+✅ Payload = bypass_success
+```
+
+![image](https://github.com/user-attachments/assets/e99be094-3c0d-4de1-9950-8e7740ed4146)
+
+NOW you have the payload but as you already notice there’s some restrictions on the logic used by the bot to handle inputs of /get-flag so I will give u the opportunity to guess how to do it ( it’s very easy now you should just type the payload in other format) 
+
+I’m just kidding there’s the final step :
+
+![image](https://github.com/user-attachments/assets/1ee480b9-e53a-4af0-8665-ee3f5baa07d7)
+
+That’s all see you next time…. For those who ask what is this payload ask Mr GPT IM VERY LAZY TO DO IT!!
