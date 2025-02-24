@@ -10,5 +10,5 @@ Special thanks to the authors for their effort in making this idea a reality and
 - [Cryptography](./CRYPTO): [Zh3gh05t](https://github.com/Zh3gh05t)
 - [Web](./WEB): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[molzri3](https://github.com/molzri3)
 - [Misc](./MISC): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[F1Z3R](https://github.com/F1Z3R)           -      [SobFoxx](https://github.com/SobFoxx)
-- [Reverse Engineering](./REVENG):
+- [Reverse Engineering](./REVENG):  [Zer0Gr2vity](https://github.com/Zer0Gr2vity)
 - [PWN](./PWN):     [stoic-crawler](https://github.com/stoic-crawler)
