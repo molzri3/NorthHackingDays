@@ -8,7 +8,7 @@ On **January 20**, this artist posted something on their Instagram—an ordinary
 
 Not far from there, a mosque stands, carrying the name of an old Moroccan king. Find it. Identify its exact **address** to solve the challenge.  
 
-🔗 [Download the file](https://we.tl/t-HRTaK9sYE4)  
+🔗 [Download the file](https://we.tl/t-S7mSEiWiJg)  
 
 **Flag Format : NHD{JX9P+W2M, Rue Ibn Khaldoun, Casablanca 20000}**
 
