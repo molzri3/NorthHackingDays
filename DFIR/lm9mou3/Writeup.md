@@ -70,7 +70,7 @@ which are shown here in the map
 
 ![WhatsApp Image 2025-02-20 à 00 10 56_853195f2](https://github.com/user-attachments/assets/f8ef0b12-a678-49b4-a268-e215e4eaf62f)
 
-And we can also recognize here the brown **"Zelij"** and we can identify the exact place from the photo was taken 
+And we can also recognize here the brown **"Zelij"** and we can identify the exact place from where the photo was taken 
 
 ![image](https://github.com/user-attachments/assets/49d9c416-51c4-4b16-8955-1f04420ebfd7)
 
