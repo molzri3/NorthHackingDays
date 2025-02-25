@@ -1,17 +1,15 @@
 # lm9mou3 😞  (DFIR+OSINT)
 ## Challenge Description 📄  
-A strange file has surfaced—its origin is unclear, but it appears to be linked to a well-known Moroccan artist who is often mocked on social media. However, something is off. The file refuses to reveal its contents, as if someone wanted to erase its existence.  
+A strange file has surfaced—its origin is unclear, but something about it feels off. It refuses to reveal its true nature, as if someone tried to erase its existence.
 
-Your mission is to uncover what lies within. Hidden inside is a crucial clue that will lead you further. But where does it point?  
+Your mission is to uncover what’s hidden inside. Within the file lies a crucial clue that will lead you further. But where does it point?
 
-On **January 20**, this artist posted something on their Instagram—an ordinary moment, or so it seems. They were dancing in a lively district of a city famous for its luxury and vibrant streets.  
+On **January 20**, a certain figure shared a post on Instagram—an ordinary moment, or so it seems. They were dancing in a lively district of a well-known city, famous for its vibrant streets and historic landmarks.
 
-Not far from there, a mosque stands, carrying the name of an old Moroccan king. Find it. Identify its exact **address** to solve the challenge.  
+Not far from there, a mosque stands, carrying the name of a notable figure from Morocco's history.. Find it. Identify its exact address to solve the challenge.
 
-🔗 [Download the file](https://we.tl/t-S7mSEiWiJg)  
-
-**Flag Format : NHD{JX9P+W2M, Rue Ibn Khaldoun, Casablanca 20000}**
+Flag Format : ***NHD{JX9P+W2M, Rue Ibn Khaldoun, Casablanca 20000}***
 
 **Good luck! 😉**  
-
+🔗 [Download the file](https://we.tl/t-S7mSEiWiJg)  
 ### Author: *TheSurViv3r*  
